@@ -1,0 +1,137 @@
+html {
+    box-sizing: border-box;
+    font-family: sans-serif;
+    font-size: 62.5%;
+    scroll-behavior: smooth;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+    padding: 0;
+    margin: 0;
+    font-size: 1.5rem;
+    color: rgb(50, 50, 50);
+}
+
+h1 {
+    font-size: 2.3rem;
+    text-transform: uppercase;
+    color: rgb(0, 0, 0);
+    margin-bottom: 25px;
+}
+
+h2 {
+    font-size: 2rem;
+    color: rgb(0, 0, 0);
+}
+
+.nav-link {
+    text-decoration: none;
+    color: black;
+    font-weight: normal;
+}
+
+body {
+    display: flex;
+    overflow: hidden;
+}
+
+#navbar, #main-doc {
+    padding: 30px;
+}
+
+#navbar {
+    flex: 0 0 290px;
+    border: 1px solid rgb(0, 0, 0);
+    height: 100vh;
+    overflow-y: auto;
+}
+
+#navbar ul li {
+    list-style: none;
+}
+
+#navbar a {
+    display: block;
+    padding: 20px 0;
+    border-top: 1px solid rgb(50, 50, 50);
+}
+
+#navbar a:hover {
+    background-color: rgb(155, 155, 155);
+    font-weight: bold;
+}
+
+#main-doc {
+    height: 100vh;
+    overflow: auto;
+    scroll-behavior: smooth;
+}
+
+.main-section + .main-section {
+    margin-top: 35px;
+}
+
+.main-section > * {
+    margin-bottom: 15px;
+}
+
+.main-section a {
+    font-weight: bold;
+}
+
+.list-items {
+    position: relative;
+    left: 15px;
+    font-weight: bold;
+}
+
+.list-items ul {
+    position: relative;
+    left: 15px;
+    font-weight: normal;
+    margin-top: 5px;
+    margin-bottom: 10px;
+}
+
+.code-exemple {
+    background-color: rgb(201, 201, 201);
+    color: rgb(0, 0, 0);
+    border-radius: 10px;
+}
+
+.code-exemple span {
+    display: block;
+    background-color: rgb(0, 0, 0);
+    color: rgb(255, 255, 255);
+    padding: 10px 10px 10px 15px;
+    font-size: 1.1rem;
+    border-radius: 8px 8px 0 0 ;
+}
+
+.code-exemple pre {
+    padding: 0 15px;
+    font-size: 1.3rem;
+    font-weight: 800;
+    /* text-wrap: wrap;
+    line-break: anywhere; */
+    overflow-y: auto;
+}
+
+@media (max-width: 768px) {
+
+    body {
+        flex-direction: column;
+    }
+    
+    #navbar {
+        max-height: 250px;
+    }
+
+    #main-doc {
+        max-height: calc(100vh - 250px);
+    }
+    
+}
